@@ -41,8 +41,8 @@ const NavBar = () => {
         <StyledNav className="navbar">
             <StyledH1> E-shop </StyledH1>
             <StyledRightDiv>
-                <StyledButton> Home </StyledButton>
-                <StyledButton> Cart </StyledButton>
+                {/* <StyledButton> Home </StyledButton>
+                <StyledButton> Cart </StyledButton> */}
             </StyledRightDiv>
         </StyledNav>
     )

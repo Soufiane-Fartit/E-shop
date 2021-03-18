@@ -90,7 +90,7 @@ const Cart = (props) => {
                                     <StyledCartItemWrapper>
                                         <StyledCartItemName>{item.name}</StyledCartItemName>
                                         <StyledCartItemPriceContainer>
-                                            <StyledCartItemPrice>{item.price} x {item.quantity} <StyledCartItemButton onClick={() => removeItem(item.id)}> Remove </StyledCartItemButton> </StyledCartItemPrice>
+                                            <StyledCartItemPrice>{item.price} € x {item.quantity} <StyledCartItemButton onClick={() => removeItem(item.id)}> Remove </StyledCartItemButton> </StyledCartItemPrice>
                                         </StyledCartItemPriceContainer>
                                     </StyledCartItemWrapper>)}
             </div>

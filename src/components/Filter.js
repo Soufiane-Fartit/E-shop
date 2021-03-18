@@ -18,12 +18,15 @@ const Filter = (props) => {
         console.log(name, option)
     }
 
+    var highlighted_options = props.filters[props.name];
+    console.log("highlighted_options", highlighted_options);
+
     return (
         <StyledFilter>
         <div className="dropdown">
-            <button className="dropbtn"> {props.name} </button>
+            <button className="dropbtn"> {props.name} : {highlighted_options} </button>
             <div className="dropdown-content">
-                {props.options.map((option) => <a href="#" key={option} onClick={() => setFilter(props.name, option)}> {option} </a>)}
+                {props.options.map((option) => <a className={(option===highlighted_options) ? 'highlited':''} href="#" key={option} onClick={() => setFilter(props.name, option)}> {option} </a>)}
             </div>
         </div>
         </StyledFilter>
