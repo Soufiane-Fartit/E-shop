@@ -11,7 +11,7 @@ const StyledFiltersContainer = styled.div`
 
 const Filters = (props) => {
     
-    const sortingFilterChoices = ["lowest", "highest", "latest"];
+    const sortingFilterChoices = ["featured", "lowest", "highest"];
     const cpuFilterChoices = ["all", "i9", "i7", "i5", "amd"];
     const cpuGenFilterChoices = ["all", "11th", "10th", "9th", "8th"];
 

@@ -32,6 +32,18 @@ const Items = (props) => {
         items = items.filter((item)=>item.specs.gen===gen_filter)
     }
 
+    if (sort_filter==="lowest") {
+        items = items.sort(function(a,b){return a.price-b.price})
+    }
+
+    if (sort_filter==="highest") {
+        items = items.sort(function(a,b){return b.price-a.price})
+    }
+
+    if (sort_filter==="featured") {
+        items = items.sort(function(a,b){return a.id-b.id})
+    }
+
 
     return (
         <>

@@ -1,6 +1,6 @@
 const initialState = {
     filters: {
-        'sort': 'latest',
+        'sort': 'featured',
         'proc': 'all',
         'gen': 'all'
     },

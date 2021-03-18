@@ -61,9 +61,7 @@ function reducer(state = initialState, action) {
       var filter_name = action.name;
       var filter_option = action.option;
       
-
       new_filters[filter_name] = filter_option;
-      console.log(new_filters);
       return {...state,filters:new_filters};
 
     default:
