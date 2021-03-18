@@ -63,6 +63,10 @@ function reducer(state = initialState, action) {
       
       new_filters[filter_name] = filter_option;
       return {...state,filters:new_filters};
+    
+    case "CLEAR_CART":
+      // console.log('cleared cart');
+      return {...state, cart:[]};
 
     default:
       return state;

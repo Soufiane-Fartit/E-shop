@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import {connect} from 'react-redux'
+import Confirmation from './Confirmation';
 
 const StyledCart = styled.div`
     float: right;
@@ -70,6 +71,8 @@ const StyledConfirmButton = styled.button`
 
 const Cart = (props) => {
 
+    var [isOpenConfirmation, setIsOpen] = useState(false);
+
     const removeItem = (id) => {
         console.log('removing item with id : ', id)
         props.dispatch({type: "REMOVE_ITEM_FROM_CART", id:id});
@@ -95,7 +98,8 @@ const Cart = (props) => {
                                     </StyledCartItemWrapper>)}
             </div>
             <StyledH2> Total : {total} € </StyledH2>
-            <StyledConfirmButton> BUY </StyledConfirmButton>
+            <StyledConfirmButton onClick={()=>{setIsOpen(true)}}> BUY </StyledConfirmButton>
+            <Confirmation isOpen={isOpenConfirmation} setIsOpen={setIsOpen} total={total} state={props.state} dispatch={props.dispatch}/>
         </StyledCart>
     )
 }
